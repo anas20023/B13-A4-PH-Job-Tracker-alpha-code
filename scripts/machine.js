@@ -8,3 +8,17 @@ const showContainer=(id)=>{
     // document.getElementById(id).classList.remove("hidden")
     document.getElementById(id).classList.add("btn-primary")
 }
+const innterviewJob=(el)=>{
+    const idx=Number(el)-1
+    jobCards[idx].status="interview"
+}
+const rejectJob=(el)=>{
+    const idx=Number(el)-1
+    jobCards[idx].status="reject"
+    
+}
+const deleteJob=(el)=>{
+    const idx=Number(el)-1
+    jobCards.splice(idx,1)
+
+}
