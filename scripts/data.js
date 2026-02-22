@@ -1,6 +1,7 @@
 const jobCards = [
   {
-    staus:false,
+    id: 1,
+    status: "reject",
     companyName: "Mobile First Corp",
     position: "React Native Developer",
     location: "Remote",
@@ -9,7 +10,8 @@ const jobCards = [
     description: "Build cross-platform mobile applications using React Native used by millions worldwide."
   },
   {
-    staus:false,
+    id: 2,
+    status: "none",
     companyName: "TechNova Solutions",
     position: "Frontend Developer",
     location: "Dhaka, Bangladesh",
@@ -18,7 +20,8 @@ const jobCards = [
     description: "Develop modern responsive UI using React and Tailwind CSS."
   },
   {
-    staus:false,
+    id: 3,
+    status: "interview",
     companyName: "CloudSync Ltd",
     position: "Backend Engineer",
     location: "Remote",
@@ -27,7 +30,8 @@ const jobCards = [
     description: "Design scalable REST APIs and microservices with Node.js."
   },
   {
-    staus:false,
+    id: 4,
+    status: "none",
     companyName: "DataBridge Inc",
     position: "Full Stack Developer",
     location: "Singapore",
@@ -36,7 +40,8 @@ const jobCards = [
     description: "Work across frontend and backend systems building enterprise platforms."
   },
   {
-    staus:false,
+    id: 5,
+    status: "reject",
     companyName: "NextWave Tech",
     position: "UI/UX Designer",
     location: "Remote",
@@ -45,7 +50,8 @@ const jobCards = [
     description: "Create user-centered designs and interactive prototypes."
   },
   {
-    staus:false,
+    id: 6,
+    status: "interview",
     companyName: "ByteCraft Studio",
     position: "JavaScript Developer",
     location: "Berlin, Germany",
@@ -54,7 +60,8 @@ const jobCards = [
     description: "Develop scalable web apps using modern JS frameworks."
   },
   {
-    staus:false,
+    id: 7,
+    status: "none",
     companyName: "SkyNet Systems",
     position: "DevOps Engineer",
     location: "Remote",
@@ -63,7 +70,8 @@ const jobCards = [
     description: "Automate deployment pipelines and manage cloud infrastructure."
   },
   {
-    staus:false,
+    id: 8,
+    status: "reject",
     companyName: "CodeSphere",
     position: "Software Engineer",
     location: "Toronto, Canada",
@@ -72,7 +80,8 @@ const jobCards = [
     description: "Build scalable backend services and collaborate with product teams."
   },
   {
-    staus:false,
+    id: 9,
+    status: "interview",
     companyName: "AppForge",
     position: "Android Developer",
     location: "Remote",
@@ -81,7 +90,8 @@ const jobCards = [
     description: "Develop native Android applications with Kotlin."
   },
   {
-    staus:false,
+    id: 10,
+    status: "none",
     companyName: "PixelPeak",
     position: "Graphic Designer",
     location: "London, UK",
@@ -90,7 +100,8 @@ const jobCards = [
     description: "Design digital assets and branding materials for global clients."
   },
   {
-    staus:false,
+    id: 11,
+    status: "interview",
     companyName: "QuantumSoft",
     position: "AI Engineer",
     location: "San Francisco, USA",
@@ -99,7 +110,8 @@ const jobCards = [
     description: "Develop machine learning models and AI-powered applications."
   },
   {
-    staus:false,
+    id: 12,
+    status: "none",
     companyName: "WebNest",
     position: "React Developer",
     location: "Remote",
@@ -108,7 +120,8 @@ const jobCards = [
     description: "Create dynamic SPAs using React and modern frontend tools."
   },
   {
-    staus:false,
+    id: 13,
+    status: "reject",
     companyName: "SecureStack",
     position: "Cybersecurity Analyst",
     location: "Remote",
@@ -117,7 +130,8 @@ const jobCards = [
     description: "Monitor threats and implement security best practices."
   },
   {
-    staus:false,
+    id: 14,
+    status: "none",
     companyName: "DataPulse",
     position: "Data Analyst",
     location: "Dhaka, Bangladesh",
@@ -126,7 +140,8 @@ const jobCards = [
     description: "Analyze business data and generate actionable insights."
   },
   {
-    staus:false,
+    id: 15,
+    status: "interview",
     companyName: "InnovateX",
     position: "Product Manager",
     location: "Remote",
@@ -135,7 +150,8 @@ const jobCards = [
     description: "Lead product development lifecycle and coordinate teams."
   },
   {
-    staus:false,
+    id: 16,
+    status: "reject",
     companyName: "BrightLabs",
     position: "QA Engineer",
     location: "Sydney, Australia",
@@ -144,7 +160,8 @@ const jobCards = [
     description: "Perform automated and manual testing for web applications."
   },
   {
-    staus:false,
+    id: 17,
+    status: "none",
     companyName: "CodePilot",
     position: "Node.js Developer",
     location: "Remote",
@@ -153,7 +170,8 @@ const jobCards = [
     description: "Build backend services using Node.js and Express."
   },
   {
-    staus:false,
+    id: 18,
+    status: "interview",
     companyName: "Visionary Apps",
     position: "iOS Developer",
     location: "New York, USA",
@@ -162,7 +180,8 @@ const jobCards = [
     description: "Develop high-performance iOS applications using Swift."
   },
   {
-    staus:false,
+    id: 19,
+    status: "none",
     companyName: "DigitalOrbit",
     position: "Content Writer",
     location: "Remote",
@@ -171,7 +190,8 @@ const jobCards = [
     description: "Write SEO-optimized content for technology platforms."
   },
   {
-    staus:false,
+    id: 20,
+    status: "reject",
     companyName: "FutureLink",
     position: "Cloud Engineer",
     location: "Remote",
