@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     for (const counter of totalCount) {
         counter.innerText = Number(jobCards.length)
     }
+    interviewCount.innerText=(jobCards.filter((job)=>{
+        return job.status==='interview'
+    })).length
+    rejectCount.innerText=(jobCards.filter((job)=>{
+        return job.status==='reject'
+    })).length
     // console.log(totalCount)
 })
 const showAllJobs = () => {
