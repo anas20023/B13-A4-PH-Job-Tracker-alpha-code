@@ -13,6 +13,6 @@ interviewbtn.addEventListener("click",()=>{
 })
 rejectbtn.addEventListener("click",()=>{
     showContainer('rejectbtn')
-    showRejectViewJobs()
+    showRejectJobs()
     // console.log('reject btn')
 })

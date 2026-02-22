@@ -49,16 +49,17 @@ const showAllJobs = () => {
                             <p class="text-md text-gray-500">${job.position}</p>
                         </div>
                         <div
+                            data-id=${job.id} data-action="delete"
                             class="border-2 h-8 w-8 border-slate-200 rounded-full p-2.5 flex flex-col justify-center items-center cursor-pointer hover:border-red-400 active:bg-slate-50 transition-all duration-200 ease-in-out">
-                            <i class="fa-regular fa-trash-can"></i>
+                            <i data-id=${job.id} data-action="delete" class="fa-regular fa-trash-can"></i>
                         </div>
                     </div>
                     <p class="text-sm text-gray-500">${job.location + "  •  " + job.type + "  •  " + job.salary}</p>
                     <span class="${(job.status === "reject") ? "bg-red-400 text-white" : (job.status === "interview") ? "bg-green-400 text-white" : "bg-slate-400"} w-32 text-center rounded p-2 mt-1">${(job.status === "reject") ? "REJECT" : (job.status === "interview") ? "APPLIED" : "NOT APPLED"}</span>
                     <p class="text-sm text-gray-500">${job.description}</p>
                     <div class="flex flex-row gap-2 pt-2">
-                        <button  class="btn btn btn-outline btn-success interview_btn">Interview</button>
-                        <button  class="btn btn btn-outline btn-error reject_btn">Rejected</button>
+                        <button data-id=${job.id} data-action="interview"  class="btn btn btn-outline btn-success interview_btn">Interview</button>
+                        <button data-id=${job.id} data-action="reject" class="btn btn btn-outline btn-error reject_btn">Rejected</button>
                     </div>
                 </div>
     
@@ -104,16 +105,17 @@ const showInterViewJobs = () => {
                             <p class="text-md text-gray-500">${job.position}</p>
                         </div>
                         <div
+                            data-id=${job.id} data-action="delete"
                             class="border-2 h-8 w-8 border-slate-200 rounded-full p-2.5 flex flex-col justify-center items-center cursor-pointer hover:border-red-400 active:bg-slate-50 transition-all duration-200 ease-in-out">
-                            <i class="fa-regular fa-trash-can"></i>
+                            <i data-id=${job.id} data-action="delete" class="fa-regular fa-trash-can"></i>
                         </div>
                     </div>
                     <p class="text-sm text-gray-500">${job.location + "  •  " + job.type + "  •  " + job.salary}</p>
                     <span class="${(job.status === "reject") ? "bg-red-400 text-white" : (job.status === "interview") ? "bg-green-400 text-white" : "bg-slate-400"} w-32 text-center rounded p-2 mt-1">${(job.status === "reject") ? "REJECT" : (job.status === "interview") ? "APPLIED" : "NOT APPLED"}</span>
                     <p class="text-sm text-gray-500">${job.description}</p>
                     <div class="flex flex-row gap-2 pt-2">
-                        <button  class="btn btn btn-outline btn-success interview_btn">Interview</button>
-                        <button  class="btn btn btn-outline btn-error reject_btn">Rejected</button>
+                        <button data-id=${job.id} data-action="interview"  class="btn btn btn-outline btn-success interview_btn">Interview</button>
+                        <button data-id=${job.id} data-action="reject" class="btn btn btn-outline btn-error reject_btn">Rejected</button>
                     </div>
                 </div>
     
@@ -121,7 +123,7 @@ const showInterViewJobs = () => {
         jobContainer.appendChild(child)
     }
 }
-const showRejectViewJobs = () => {
+const showRejectJobs = () => {
     jobContainer.innerHTML = ''
     // console.log(jobCards)
     const newJobCards = jobCards.filter((job) => {
@@ -160,16 +162,17 @@ const showRejectViewJobs = () => {
                             <p class="text-md text-gray-500">${job.position}</p>
                         </div>
                         <div
+                            data-id=${job.id} data-action="delete"
                             class="border-2 h-8 w-8 border-slate-200 rounded-full p-2.5 flex flex-col justify-center items-center cursor-pointer hover:border-red-400 active:bg-slate-50 transition-all duration-200 ease-in-out">
-                            <i class="fa-regular fa-trash-can"></i>
+                            <i data-id=${job.id} data-action="delete" class="fa-regular fa-trash-can"></i>
                         </div>
                     </div>
                     <p class="text-sm text-gray-500">${job.location + "  •  " + job.type + "  •  " + job.salary}</p>
                     <span class="${(job.status === "reject") ? "bg-red-400 text-white" : (job.status === "interview") ? "bg-green-400 text-white" : "bg-slate-400"} w-32 text-center rounded p-2 mt-1">${(job.status === "reject") ? "REJECT" : (job.status === "interview") ? "APPLIED" : "NOT APPLED"}</span>
                     <p class="text-sm text-gray-500">${job.description}</p>
                     <div class="flex flex-row gap-2 pt-2">
-                        <button  class="btn btn btn-outline btn-success interview_btn">Interview</button>
-                        <button  class="btn btn btn-outline btn-error reject_btn">Rejected</button>
+                        <button data-id=${job.id} data-action="interview"  class="btn btn btn-outline btn-success interview_btn">Interview</button>
+                        <button data-id=${job.id} data-action="reject" class="btn btn btn-outline btn-error reject_btn">Rejected</button>
                     </div>
                 </div>
     
