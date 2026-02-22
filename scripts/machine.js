@@ -5,6 +5,25 @@ const showContainer=(id)=>{
             node.classList.remove("btn-primary")
         }
     }
+    //  console.log(id)
+    if(id==="allbtn"){
+        document.getElementById("acc_job_container").classList.add("hidden")
+        document.getElementById("rej_job_container").classList.add("hidden")
+        document.getElementById("all_job_container").classList.remove("hidden")
+        document.getElementById("all_job_container").classList.add("flex")
+    }
+    if(id==="interviewbtn"){
+        document.getElementById("all_job_container").classList.add("hidden")
+        document.getElementById("rej_job_container").classList.add("hidden")
+        document.getElementById("acc_job_container").classList.remove("hidden")
+        document.getElementById("acc_job_container").classList.add("flex")
+    }
+    if(id==="rejectbtn"){
+        document.getElementById("acc_job_container").classList.add("hidden")
+        document.getElementById("all_job_container").classList.add("hidden")
+        document.getElementById("rej_job_container").classList.remove("hidden")
+        document.getElementById("rej_job_container").classList.add("flex")
+    }
     // document.getElementById(id).classList.remove("hidden")
     document.getElementById(id).classList.add("btn-primary")
 }

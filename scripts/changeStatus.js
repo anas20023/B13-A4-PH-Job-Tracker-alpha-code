@@ -4,14 +4,16 @@ jobContainer.addEventListener("click",(e)=>{
     const el=e.target.dataset.id
     if(action==="interview"){
         innterviewJob(el)
-        showAllJobs()
+         showAllJobs()
         showInterViewJobs()
         showRejectJobs()
         return
     }
     if(action==="reject"){
         rejectJob(el)
-        showAllJobs()
+         showAllJobs()
+        showInterViewJobs()
+        showRejectJobs()
         return
     }
     if(action==="delete"){

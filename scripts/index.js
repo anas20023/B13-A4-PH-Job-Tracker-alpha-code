@@ -1,18 +1,18 @@
-const jobContainer = document.getElementById("job_container")
+const jobContainer = document.getElementById("all_job_container")
+const acc_job_container = document.getElementById("acc_job_container")
+const rej_job_container = document.getElementById("rej_job_container")
 const totalCount = document.querySelectorAll(".total_count")
 const interviewCount = document.querySelector(".interview_count")
 const rejectCount = document.querySelector(".reject_count")
 document.addEventListener('DOMContentLoaded', () => {
     showAllJobs()
-    for (const counter of totalCount) {
-        counter.innerText = Number(jobCards.length)
-    }
     interviewCount.innerText=(jobCards.filter((job)=>{
         return job.status==='interview'
     })).length
     rejectCount.innerText=(jobCards.filter((job)=>{
         return job.status==='reject'
     })).length
+    
     // console.log(totalCount)
 })
 const showAllJobs = () => {
@@ -66,9 +66,12 @@ const showAllJobs = () => {
     `
         jobContainer.appendChild(child)
     }
+    for (const counter of totalCount) {
+        counter.innerText = Number(jobCards.length)
+    }
 }
 const showInterViewJobs = () => {
-    jobContainer.innerHTML = ''
+    acc_job_container.innerHTML = ''
     // console.log(jobCards)
     const newJobCards = jobCards.filter((job) => {
         return job.status === "interview"
@@ -86,7 +89,7 @@ const showInterViewJobs = () => {
                 </div>
             `
 
-        jobContainer.appendChild(child)
+        acc_job_container.appendChild(child)
         return
     }
     document.getElementById('smallCounter').innerHTML =
@@ -120,11 +123,14 @@ const showInterViewJobs = () => {
                 </div>
     
     `
-        jobContainer.appendChild(child)
+        acc_job_container.appendChild(child)
     }
+    interviewCount.innerText=(jobCards.filter((job)=>{
+        return job.status==='interview'
+    })).length
 }
 const showRejectJobs = () => {
-    jobContainer.innerHTML = ''
+    rej_job_container.innerHTML = ''
     // console.log(jobCards)
     const newJobCards = jobCards.filter((job) => {
         return job.status === "reject"
@@ -142,7 +148,7 @@ const showRejectJobs = () => {
                 </div>
             `
 
-        jobContainer.appendChild(child)
+        rej_job_container.appendChild(child)
         return
     }
     document.getElementById('smallCounter').innerHTML =
@@ -177,6 +183,9 @@ const showRejectJobs = () => {
                 </div>
     
     `
-        jobContainer.appendChild(child)
+        rej_job_container.appendChild(child)
     }
+    rejectCount.innerText=(jobCards.filter((job)=>{
+        return job.status==='reject'
+    })).length
 }
