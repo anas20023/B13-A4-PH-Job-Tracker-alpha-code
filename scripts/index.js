@@ -33,11 +33,13 @@ const showAllJobs = () => {
         jobContainer.appendChild(child)
         return
     }
-    document.getElementById('smallCounter').innerHTML =
-        `
+    // console.log(currentTab)
+    if (currentTab == "allbtn") {
+        document.getElementById('smallCounter').innerHTML =
+            `
             ${jobCards.length} Jobs
         `
-
+    }
     for (const job of jobCards) {
         const child = document.createElement('div')
         child.innerHTML = `
@@ -55,7 +57,7 @@ const showAllJobs = () => {
                         </div>
                     </div>
                     <p class="text-sm text-gray-500">${job.location + "  •  " + job.type + "  •  " + job.salary}</p>
-                    <span class="${(job.status === "reject") ? "bg-red-400 text-white" : (job.status === "interview") ? "bg-green-400 text-white" : "bg-slate-400"} w-32 text-center rounded p-2 mt-1">${(job.status === "reject") ? "REJECT" : (job.status === "interview") ? "APPLIED" : "NOT APPLED"}</span>
+                    <span class="${(job.status === "reject") ? "bg-red-400 text-white" : (job.status === "interview") ? "bg-green-400 text-white" : "bg-slate-400"} w-32 text-center rounded p-2 mt-1">${(job.status === "reject") ? "Reject" : (job.status === "interview") ? "Interview" : "Not Applied"}</span>
                     <p class="text-sm text-gray-500">${job.description}</p>
                     <div class="flex flex-row gap-2 pt-2">
                         <button data-id=${job.id} data-action="interview"  class="btn btn btn-outline btn-success interview_btn">Interview</button>
@@ -94,10 +96,18 @@ const showInterViewJobs = () => {
         return job.status === 'reject'
     })).length
 
-    document.getElementById('smallCounter').innerHTML =
+    if (currentTab == "allbtn") {
+        document.getElementById('smallCounter').innerHTML =
+            `
+            ${jobCards.length} Jobs
         `
+    }
+    else {
+        document.getElementById('smallCounter').innerHTML =
+            `
            ${newJobCards.length} of ${jobCards.length} Jobs
         `
+    }
 
     if (newJobCards.length <= 0) {
         const child = document.createElement("section")
@@ -134,7 +144,7 @@ const showInterViewJobs = () => {
                         </div>
                     </div>
                     <p class="text-sm text-gray-500">${job.location + "  •  " + job.type + "  •  " + job.salary}</p>
-                    <span class="${(job.status === "reject") ? "bg-red-400 text-white" : (job.status === "interview") ? "bg-green-400 text-white" : "bg-slate-400"} w-32 text-center rounded p-2 mt-1">${(job.status === "reject") ? "REJECT" : (job.status === "interview") ? "APPLIED" : "NOT APPLED"}</span>
+                    <span class="${(job.status === "reject") ? "bg-red-400 text-white" : (job.status === "interview") ? "bg-green-400 text-white" : "bg-slate-400"} w-32 text-center rounded p-2 mt-1">${(job.status === "reject") ? "Reject" : (job.status === "interview") ? "Interview" : "Not Applied"}</span>
                     <p class="text-sm text-gray-500">${job.description}</p>
                     <div class="flex flex-row gap-2 pt-2">
                         <button data-id=${job.id} data-action="interview"  class="btn btn btn-outline btn-success interview_btn">Interview</button>
@@ -164,11 +174,18 @@ const showRejectJobs = () => {
         return job.status === 'reject'
     })).length
 
-
-    document.getElementById('smallCounter').innerHTML =
+    if (currentTab == "allbtn") {
+        document.getElementById('smallCounter').innerHTML =
+            `
+            ${jobCards.length} Jobs
         `
+    }
+    else {
+        document.getElementById('smallCounter').innerHTML =
+            `
            ${newJobCards.length} of ${jobCards.length} Jobs
         `
+    }
 
     if (newJobCards.length <= 0) {
         const child = document.createElement("section")
@@ -203,7 +220,7 @@ const showRejectJobs = () => {
                         </div>
                     </div>
                     <p class="text-sm text-gray-500">${job.location + "  •  " + job.type + "  •  " + job.salary}</p>
-                    <span class="${(job.status === "reject") ? "bg-red-400 text-white" : (job.status === "interview") ? "bg-green-400 text-white" : "bg-slate-400"} w-32 text-center rounded p-2 mt-1">${(job.status === "reject") ? "REJECT" : (job.status === "interview") ? "APPLIED" : "NOT APPLED"}</span>
+                    <span class="${(job.status === "reject") ? "bg-red-400 text-white" : (job.status === "interview") ? "bg-green-400 text-white" : "bg-slate-400"} w-32 text-center rounded p-2 mt-1">${(job.status === "reject") ? "Reject" : (job.status === "interview") ? "Interview" : "Not Applied"}</span>
                     <p class="text-sm text-gray-500">${job.description}</p>
                     <div class="flex flex-row gap-2 pt-2">
                         <button data-id=${job.id} data-action="interview"  class="btn btn btn-outline btn-success interview_btn">Interview</button>
