@@ -6,13 +6,13 @@ const interviewCount = document.querySelector(".interview_count")
 const rejectCount = document.querySelector(".reject_count")
 document.addEventListener('DOMContentLoaded', () => {
     showAllJobs()
-    interviewCount.innerText=(jobCards.filter((job)=>{
-        return job.status==='interview'
+    interviewCount.innerText = (jobCards.filter((job) => {
+        return job.status === 'interview'
     })).length
-    rejectCount.innerText=(jobCards.filter((job)=>{
-        return job.status==='reject'
+    rejectCount.innerText = (jobCards.filter((job) => {
+        return job.status === 'reject'
     })).length
-    
+
     // console.log(totalCount)
 })
 const showAllJobs = () => {
@@ -69,6 +69,13 @@ const showAllJobs = () => {
     for (const counter of totalCount) {
         counter.innerText = Number(jobCards.length)
     }
+    interviewCount.innerText = (jobCards.filter((job) => {
+        return job.status === 'interview'
+    })).length
+    rejectCount.innerText = (jobCards.filter((job) => {
+        return job.status === 'reject'
+    })).length
+
 }
 const showInterViewJobs = () => {
     acc_job_container.innerHTML = ''
@@ -76,6 +83,22 @@ const showInterViewJobs = () => {
     const newJobCards = jobCards.filter((job) => {
         return job.status === "interview"
     })
+
+    for (const counter of totalCount) {
+        counter.innerText = Number(jobCards.length)
+    }
+    interviewCount.innerText = (jobCards.filter((job) => {
+        return job.status === 'interview'
+    })).length
+    rejectCount.innerText = (jobCards.filter((job) => {
+        return job.status === 'reject'
+    })).length
+
+    document.getElementById('smallCounter').innerHTML =
+        `
+           ${newJobCards.length} of ${jobCards.length} Jobs
+        `
+
     if (newJobCards.length <= 0) {
         const child = document.createElement("section")
         child.className = 'max-w-6xl mx-auto'
@@ -92,10 +115,7 @@ const showInterViewJobs = () => {
         acc_job_container.appendChild(child)
         return
     }
-    document.getElementById('smallCounter').innerHTML =
-        `
-           ${newJobCards.length} out of ${jobCards.length} Jobs
-        `
+
 
     for (const job of newJobCards) {
         const child = document.createElement('div')
@@ -125,9 +145,7 @@ const showInterViewJobs = () => {
     `
         acc_job_container.appendChild(child)
     }
-    interviewCount.innerText=(jobCards.filter((job)=>{
-        return job.status==='interview'
-    })).length
+
 }
 const showRejectJobs = () => {
     rej_job_container.innerHTML = ''
@@ -135,6 +153,23 @@ const showRejectJobs = () => {
     const newJobCards = jobCards.filter((job) => {
         return job.status === "reject"
     })
+
+    for (const counter of totalCount) {
+        counter.innerText = Number(jobCards.length)
+    }
+    interviewCount.innerText = (jobCards.filter((job) => {
+        return job.status === 'interview'
+    })).length
+    rejectCount.innerText = (jobCards.filter((job) => {
+        return job.status === 'reject'
+    })).length
+
+
+    document.getElementById('smallCounter').innerHTML =
+        `
+           ${newJobCards.length} of ${jobCards.length} Jobs
+        `
+
     if (newJobCards.length <= 0) {
         const child = document.createElement("section")
         child.className = 'max-w-6xl mx-auto'
@@ -147,15 +182,9 @@ const showRejectJobs = () => {
                 <p class="text-sm text-slate-500">Check back soon for new job opportunities</p>
                 </div>
             `
-
         rej_job_container.appendChild(child)
         return
     }
-    document.getElementById('smallCounter').innerHTML =
-        `
-           ${newJobCards.length} out of ${jobCards.length} Jobs
-        `
-
 
     for (const job of newJobCards) {
         const child = document.createElement('div')
@@ -185,7 +214,4 @@ const showRejectJobs = () => {
     `
         rej_job_container.appendChild(child)
     }
-    rejectCount.innerText=(jobCards.filter((job)=>{
-        return job.status==='reject'
-    })).length
 }

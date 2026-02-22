@@ -1,7 +1,7 @@
 const jobCards = [
   {
     id: 1,
-    status: "reject",
+    status: "none",
     companyName: "Mobile First Corp",
     position: "React Native Developer",
     location: "Remote",
@@ -21,7 +21,7 @@ const jobCards = [
   },
   {
     id: 3,
-    status: "interview",
+    status: "none",
     companyName: "CloudSync Ltd",
     position: "Backend Engineer",
     location: "Remote",
@@ -41,7 +41,7 @@ const jobCards = [
   },
   {
     id: 5,
-    status: "reject",
+    status: "none",
     companyName: "NextWave Tech",
     position: "UI/UX Designer",
     location: "Remote",
@@ -51,7 +51,7 @@ const jobCards = [
   },
   {
     id: 6,
-    status: "interview",
+    status: "none",
     companyName: "ByteCraft Studio",
     position: "JavaScript Developer",
     location: "Berlin, Germany",
@@ -71,7 +71,7 @@ const jobCards = [
   },
   {
     id: 8,
-    status: "reject",
+    status: "none",
     companyName: "CodeSphere",
     position: "Software Engineer",
     location: "Toronto, Canada",
@@ -81,7 +81,7 @@ const jobCards = [
   },
   {
     id: 9,
-    status: "interview",
+    status: "none",
     companyName: "AppForge",
     position: "Android Developer",
     location: "Remote",
@@ -101,7 +101,7 @@ const jobCards = [
   },
   {
     id: 11,
-    status: "interview",
+    status: "none",
     companyName: "QuantumSoft",
     position: "AI Engineer",
     location: "San Francisco, USA",
@@ -121,7 +121,7 @@ const jobCards = [
   },
   {
     id: 13,
-    status: "reject",
+    status: "none",
     companyName: "SecureStack",
     position: "Cybersecurity Analyst",
     location: "Remote",
@@ -141,7 +141,7 @@ const jobCards = [
   },
   {
     id: 15,
-    status: "interview",
+    status: "none",
     companyName: "InnovateX",
     position: "Product Manager",
     location: "Remote",
@@ -151,7 +151,7 @@ const jobCards = [
   },
   {
     id: 16,
-    status: "reject",
+    status: "none",
     companyName: "BrightLabs",
     position: "QA Engineer",
     location: "Sydney, Australia",
@@ -171,7 +171,7 @@ const jobCards = [
   },
   {
     id: 18,
-    status: "interview",
+    status: "none",
     companyName: "Visionary Apps",
     position: "iOS Developer",
     location: "New York, USA",
@@ -191,7 +191,7 @@ const jobCards = [
   },
   {
     id: 20,
-    status: "reject",
+    status: "none",
     companyName: "FutureLink",
     position: "Cloud Engineer",
     location: "Remote",

@@ -24,3 +24,55 @@ jobContainer.addEventListener("click",(e)=>{
         return
     }
 })
+acc_job_container.addEventListener("click",(e)=>{
+    //console.log(e.target.dataset)
+    const action=e.target.dataset.action
+    const el=e.target.dataset.id
+    if(action==="interview"){
+        innterviewJob(el)
+        showAllJobs()
+        showInterViewJobs()
+        showRejectJobs()
+        return
+    }
+    if(action==="reject"){
+        rejectJob(el)
+        showAllJobs()
+        showInterViewJobs()
+        showRejectJobs()
+        return
+    }
+    if(action==="delete"){
+        deleteJob(el)
+        showAllJobs()
+        showInterViewJobs()
+        showRejectJobs()
+        return
+    }
+})
+rej_job_container.addEventListener("click",(e)=>{
+    //console.log(e.target.dataset)
+    const action=e.target.dataset.action
+    const el=e.target.dataset.id
+    if(action==="interview"){
+        innterviewJob(el)
+        showAllJobs()
+        showInterViewJobs()
+        showRejectJobs()
+        return
+    }
+    if(action==="reject"){
+        rejectJob(el)
+        showAllJobs()
+        showInterViewJobs()
+        showRejectJobs()
+        return
+    }
+    if(action==="delete"){
+        deleteJob(el)
+        showAllJobs()
+        showInterViewJobs()
+        showRejectJobs()
+        return
+    }
+})

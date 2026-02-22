@@ -28,16 +28,25 @@ const showContainer=(id)=>{
     document.getElementById(id).classList.add("btn-primary")
 }
 const innterviewJob=(el)=>{
-    const idx=Number(el)-1
+    const idx=jobCards.findIndex(job=> job.id===Number(el))
+    if(idx==-1) {
+        return
+    }
     jobCards[idx].status="interview"
 }
 const rejectJob=(el)=>{
-    const idx=Number(el)-1
+    const idx=jobCards.findIndex(job=> job.id===Number(el))
+    if(idx==-1) {
+        return
+    }
     jobCards[idx].status="reject"
     
 }
 const deleteJob=(el)=>{
-    const idx=Number(el)-1
+    const idx=jobCards.findIndex(job=> job.id===Number(el))
+    if(idx==-1) {
+        return
+    }
     jobCards.splice(idx,1)
 
 }
