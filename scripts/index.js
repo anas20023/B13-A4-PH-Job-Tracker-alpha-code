@@ -30,8 +30,8 @@ const showAllJobs = () => {
                     <span class="bg-[#EEF4FF] w-32 text-center rounded p-2 mt-1">NOT APPLIED</span>
                     <p class="text-sm text-gray-500">${job.description}</p>
                     <div class="flex flex-row gap-2 pt-2">
-                        <button class="btn btn btn-outline btn-success">Interview</button>
-                        <button class="btn btn btn-outline btn-error">Rejected</button>
+                        <button  class="btn btn btn-outline btn-success interview_btn">Interview</button>
+                        <button  class="btn btn btn-outline btn-error reject_btn">Rejected</button>
                     </div>
                 </div>
     
