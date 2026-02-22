@@ -31,8 +31,7 @@
             <h1 class="text-2xl font-bold text-[#002C5C]">
                 Job Application Tracker
             </h1>
-            <div
-                class="container grid grid-cols-1 md:grid-cols-3 py-4 gap-4">
+            <div class="container grid grid-cols-1 md:grid-cols-3 py-4 gap-4">
                 <div class="bg-white rounded outline-2 outline-slate-100 p-5">
                     <h1 class="text-lg font-semibold text-[#323B49]">Total</h1>
                     <p class="text-2xl font-bold text-[#002C5C] total_count">
@@ -61,16 +60,36 @@
                 <p class="text-[#002C5C]">8 jobs</p>
             </div>
             <div class="flex flex-row justify-start items-center gap-4 my-4">
-                <button class="btn btn-primary">Total</button>
+                <button class="btn btn-primary">All</button>
                 <button class="btn">Interview</button>
                 <button class="btn">Rejected</button>
             </div>
             <div
                 id="job_container"
-                class="bg-white p-4 h-10 my-4 rounded">
+                class="py-4 my-2 rounded grid grid-cols-1 gap-4">
+                <div class="flex flex-col justify-between gap-2 bg-white outline-2 outline-gray-100 p-4 rounded">
+                    <div class="flex flex-row justify-between items-center">
+                        <div>
+                            <h1>Mobile First Corp</h1>
+                            <p>React Native Developer</p>
+                        </div>
+                        <div
+                            class="border-2 h-8 w-8 border-slate-50 rounded-full p-2 flex flex-col justify-center items-center btn">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+                    <p>Remote • Full-time • $130,000 - $175,000</p>
+                    <span>NOT APPLIED</span>
+                    <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <div>
+                        <button class="btn">Interview</button>
+                        <button class="btn">Rejected</button>
+                    </div>
+                </div>
+                
             </div>
         </section>
-
+        <script src="./scripts/data.js"></script>
         <script src="./scripts/index.js"></script>
     </body>
 </html>
