@@ -1,4 +1,4 @@
-const jobCards = [
+export let jobCards = [
   {
     id: 1,
     status: "none",
@@ -200,4 +200,4 @@ const jobCards = [
     description: "Manage AWS infrastructure and cloud deployment strategies."
   }
 ];
-let currentTab="allbtn";
+let currentTab = "allbtn";
